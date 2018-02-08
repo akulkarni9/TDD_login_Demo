@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TDD_Demo</string>
+
+    <string name="user_name">User name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+</resources>
