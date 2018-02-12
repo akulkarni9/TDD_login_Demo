@@ -39,7 +39,7 @@ public class PresenterTest {
     {
         LoginView loginView= mock(LoginView.class);
         LoginPresenter loginPresenter = new LoginPresenter(loginView);
-        loginPresenter.doLogin("ajay","demotdd");
+        loginPresenter.doLogin("ajay","tdddemo");
         verify(loginView).showLoginSuccessMessage();
     }
 
@@ -57,10 +57,10 @@ public class PresenterTest {
     {
         LoginView loginView= mock(LoginView.class);
         LoginPresenter loginPresenter = new LoginPresenter(loginView);
-        loginPresenter.doLogin("xyz","tdd");
+        loginPresenter.doLogin("xyz","tdddemo");
         loginPresenter.doLogin("abc","detdd");
         loginPresenter.doLogin("qwexyz","dtdd");
-        loginPresenter.doLogin("pqrxyz","demtdd");
+        loginPresenter.doLogin("pqrxyz","demotdd");
         verify(loginView).showErrorMessageForMaxLoginAttempt();
     }
 }

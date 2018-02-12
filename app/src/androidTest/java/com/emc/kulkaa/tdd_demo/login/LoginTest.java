@@ -24,7 +24,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 public class LoginTest {
 
-    ActivityTestRule<TestLoginActivity> activityTestRule = new ActivityTestRule<>(TestLoginActivity.class);
+    private ActivityTestRule<TestLoginActivity> activityTestRule = new ActivityTestRule<>(TestLoginActivity.class);
 
     @Test
     public void checkUserNameEditTextIsDisplayed() {
@@ -53,8 +53,6 @@ public class LoginTest {
         onView(withId(R.id.edt_password)).perform(typeText("demotdd"),closeSoftKeyboard());
         onView(withId(R.id.btn_login)).check(matches(isDisplayed())).perform(click());
         onView(withText("Login successful.")).check(matches(isDisplayed()));
-
     }
-
 
 }
